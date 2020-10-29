@@ -1,0 +1,50 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.wavepropagation.webapp"
+    },
+    "jhipsterVersion": "6.10.3",
+    "applicationType": "monolith",
+    "baseName": "wavepropagation",
+    "packageName": "com.wavepropagation.webapp",
+    "packageFolder": "com/wavepropagation/webapp",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "NWFjZjE4OTk3YWUzZWM5NGZmMWFiMGMwNGMxZTMwNmVlZTRhN2VjODM5MDNkNmM1ZDkyMjExMmU0MzI5Y2Q5YjU0ODI4ZjE0OWI2NmUxN2IwMmQ0NWNiY2FhOTRhOTExOGE1YWQxOWYxMmUzMDJlNTg3OWJlMDhhYzY3MjhkN2Y=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "vue",
+    "clientTheme": "lux",
+    "clientThemeVariant": "light",
+    "creationTimestamp": 1603953135785,
+    "testFrameworks": ["gatling"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-vuejs",
+        "version": "1.9.2"
+      }
+    ],
+    "enableTranslation": false,
+    "blueprints": [
+      {
+        "name": "generator-jhipster-vuejs",
+        "version": "1.9.2"
+      }
+    ]
+  }
+}
