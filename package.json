@@ -15,11 +15,12 @@
     "bootstrap": "4.5.0",
     "bootstrap-vue": "2.14.0",
     "bootswatch": "4.5.0",
+    "chart.js": "^2.9.4",
     "date-fns": "2.14.0",
-    "swagger-ui-dist": "3.25.4",
     "sockjs-client": "1.1.4",
-    "webstomp-client": "1.2.0",
+    "swagger-ui-dist": "3.25.4",
     "vue": "2.6.11",
+    "vue-chartjs": "^3.5.1",
     "vue-class-component": "7.2.3",
     "vue-cookie": "1.1.4",
     "vue-i18n": "8.17.7",
@@ -28,7 +29,8 @@
     "vue-router": "3.2.0",
     "vue2-filters": "0.11.0",
     "vuelidate": "0.7.5",
-    "vuex": "3.4.0"
+    "vuex": "3.4.0",
+    "webstomp-client": "1.2.0"
   },
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
