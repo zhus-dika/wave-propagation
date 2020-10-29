@@ -1,12 +1,7 @@
 <template>
     <div class="home row">
-        <div class="col-md-3">
-            <span class="hipster img-fluid rounded"></span>
-        </div>
-        <div class="col-md-9">
-            <h1 class="display-4">Welcome, Java Hipster!</h1>
-            <p class="lead">This is your homepage</p>
-
+        <div class="col-md-5">
+            <h1 class="display-4">Welcome, Wave Propagation Tools!</h1>
             <div>
                 <div class="alert alert-success" v-if="authenticated">
                     <span v-if="username">You are logged in as user "{{username}}"</span>
@@ -14,32 +9,54 @@
 
                 <div class="alert alert-warning" v-if="!authenticated">
                     <span>If you want to </span>
-                    <a class="alert-link" v-on:click="openLogin()">sign in</a><span >, you can try the default accounts:<br/>- Administrator (login="admin" and password="admin") <br/>- User (login="user" and password="user").</span>
+                    <a class="alert-link" v-on:click="openLogin()">sign in</a><span >, you can try the default account:<br/>- User (login="user" and password="user").</span>
                 </div>
                 <div class="alert alert-warning" v-if="!authenticated">
                     <span>You don't have an account yet?</span>&nbsp;
                     <router-link class="alert-link" to="/register">Register a new account</router-link>
                 </div>
             </div>
-
-            <p>
-                If you have any question on JHipster:
-            </p>
-
-            <ul>
-                <li><a href="https://www.jhipster.tech/" target="_blank" rel="noopener">JHipster homepage</a></li>
-                <li><a href="http://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener">JHipster on Stack Overflow</a></li>
-                <li><a href="https://github.com/jhipster/generator-jhipster/issues?state=open" target="_blank" rel="noopener">JHipster bug tracker</a></li>
-                <li><a href="https://gitter.im/jhipster/generator-jhipster" target="_blank" rel="noopener">JHipster public chat room</a></li>
-                <li><a href="https://twitter.com/jhipster" target="_blank" rel="noopener">follow @jhipster on Twitter</a></li>
-            </ul>
-
-            <p>
-                <span>If you like JHipster, don't forget to give us a star on</span> <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener">GitHub</a>!
-            </p>
+        </div>
+        <div class="col-md-7 col-main">
+            <h3 class="main-title">Fill data and get charts for your case!</h3>
+            <h5>This is your work panel</h5>
+            <form>
+                <div class="form-group">
+                    <label for="rho1">Choose rho of the first element:</label>
+                    <input class="form-control" type="number" v-model="rho1" id="rho1" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="rho2">Choose rho of the second element:</label>
+                    <input class="form-control" type="number" v-model="rho2" id="rho2" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="speed1">Choose speed of sound in the first element:</label>
+                    <input class="form-control" type="number" v-model="speed1" id="speed1" min="0">
+                </div>
+                <div class="form-group">
+                    <label for="speed2">Choose speed of sound in the second element:</label>
+                    <input class="form-control" type="number" v-model="speed2" id="speed2" min="0">
+                </div>
+                <button type="submit" class="btn btn-danger">Submit</button>
+            </form>
+            <random-chart></random-chart>
         </div>
     </div>
 </template>
 
-<script lang="ts" src="./home.component.ts">
+<script lang="ts">
+import RandomChart from '@/core/chart/RandomChart.vue';
+
+export default {
+    components: { RandomChart }
+};
 </script>
+<style scoped>
+.col-main {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.main-title {
+    color: #fb8817;
+}
+</style>
