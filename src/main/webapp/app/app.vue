@@ -4,7 +4,7 @@
     <div id="app-header">
       <jhi-navbar></jhi-navbar>
     </div>
-    <div class="container-fluid">
+    <div class="container">
       <div class="card jh-card">
         <router-view></router-view>
       </div>
@@ -12,9 +12,8 @@
         <span slot="modal-title" id="login-title">Sign in</span>
         <login-form></login-form>
       </b-modal>
-
-      <jhi-footer></jhi-footer>
     </div>
+    <!--<jhi-footer></jhi-footer>-->
   </div>
 </template>
 

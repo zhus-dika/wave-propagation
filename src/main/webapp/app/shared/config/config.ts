@@ -3,6 +3,7 @@ import { setupAxiosInterceptors } from '@/shared/config/axios-interceptor';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons/faArrowLeft';
+import { faChartLine } from '@fortawesome/free-solid-svg-icons/faChartLine';
 import { faAsterisk } from '@fortawesome/free-solid-svg-icons/faAsterisk';
 import { faBan } from '@fortawesome/free-solid-svg-icons/faBan';
 import { faBars } from '@fortawesome/free-solid-svg-icons/faBars';
@@ -56,6 +57,7 @@ export function initVueApp(vue) {
 
 export function initFortAwesome(vue) {
   library.add(
+    faChartLine,
     faArrowLeft,
     faAsterisk,
     faBan,

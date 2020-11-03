@@ -1,20 +1,20 @@
 <template>
     <b-navbar toggleable="md" type="light" class="bg-light">
         <b-navbar-brand class="logo" b-link to="/">
-            <span class="logo-img"></span>
-            <span class="navbar-title">wavepropagation</span> <span class="navbar-version">{{version}}</span>
-        </b-navbar-brand>      
-        <b-navbar-toggle 
-        right 
-        class="jh-navbar-toggler d-lg-none" 
-        href="javascript:void(0);"  
-        data-toggle="collapse" 
-        target="header-tabs" 
-        aria-expanded="false" 
+            <font-awesome-icon style="color: #fb8817;" icon="chart-line" />
+            <span class="navbar-title">wavepropagation</span>
+        </b-navbar-brand>
+        <b-navbar-toggle
+        right
+        class="jh-navbar-toggler d-lg-none"
+        href="javascript:void(0);"
+        data-toggle="collapse"
+        target="header-tabs"
+        aria-expanded="false"
         aria-label="Toggle navigation">
             <font-awesome-icon icon="bars" />
         </b-navbar-toggle>
-           
+
         <b-collapse is-nav id="header-tabs">
             <b-navbar-nav class="ml-auto">
                 <b-nav-item to="/" exact>
