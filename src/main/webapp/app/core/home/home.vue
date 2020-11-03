@@ -23,19 +23,19 @@
             <form @submit.prevent.default="submitData">
                 <div class="form-group">
                     <label for="rho1">Choose rho of the first element:</label>
-                    <input class="form-control" type="number" v-model="rho1" id="rho1" min="1">
+                    <input class="form-control" v-model="rho1" id="rho1">
                 </div>
                 <div class="form-group">
                     <label for="rho2">Choose rho of the second element:</label>
-                    <input class="form-control" type="number" v-model="rho2" id="rho2" min="1">
+                    <input class="form-control" v-model="rho2" id="rho2">
                 </div>
                 <div class="form-group">
                     <label for="speed1">Choose speed of sound in the first element:</label>
-                    <input class="form-control" type="number" v-model="v1" id="speed1" min="1">
+                    <input class="form-control" v-model="v1" id="speed1">
                 </div>
                 <div class="form-group">
                     <label for="speed2">Choose speed of sound in the second element:</label>
-                    <input class="form-control" type="number" v-model="v2" id="speed2" min="1">
+                    <input class="form-control" v-model="v2" id="speed2">
                 </div>
                 <button type="submit" class="btn btn-danger">Submit</button>
             </form>
