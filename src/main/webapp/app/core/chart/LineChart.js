@@ -12,6 +12,26 @@ export default {
   },
   data() {
     return {
+      options: {
+        scales: {
+          xAxes: [
+            {
+              scaleLabel: {
+                display: true,
+                labelString: `xi`,
+              },
+            },
+          ],
+          yAxes: [
+            {
+              scaleLabel: {
+                display: true,
+                labelString: 'v',
+              },
+            },
+          ],
+        },
+      },
       fillcolors: [
         '#d86d93',
         '#ff8800',
@@ -55,9 +75,9 @@ export default {
         '#3E2723',
       ],
       backgroundColor: [
-        '#346f79',
+        '#E6B0AA',
         '#fead00',
-        '#80000d',
+        '#FFCC80',
         '#555555',
         '#bf3300',
         '#b97b2a',
@@ -212,7 +232,6 @@ export default {
     renderLineChart: function () {
       var chartArray = [];
       this.labelArray.forEach((element, idx) => {
-        console.log(this.data[idx]);
         chartArray.push({
           label: element,
           data: this.data[idx],

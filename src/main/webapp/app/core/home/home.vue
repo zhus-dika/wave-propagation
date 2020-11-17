@@ -1,44 +1,34 @@
 <template>
     <div class="home row">
         <div class="col-md-5">
-            <h2>Welcome, Wave Propagation Tools!</h2>
-            <div>
-                <div class="alert alert-success" v-if="authenticated">
-                    <span v-if="username">You are logged in as user "{{username}}"</span>
-                </div>
-
-                <div class="alert alert-success" v-if="!authenticated">
-                    <span>If you want to </span>
-                    <a class="alert-link" v-on:click="openLogin()">sign in</a><span >, you can try the default account:<br/>- User (login="user" and password="user").</span>
-                </div>
-                <div class="alert alert-success" v-if="!authenticated">
-                    <span>You don't have an account yet?</span>&nbsp;
-                    <router-link class="alert-link" to="/register">Register a new account</router-link>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-7 col-main">
             <h3 class="main-title">Fill data and get charts for your case!</h3>
             <h5>This is your work panel</h5>
             <form @submit.prevent.default="submitData">
-                <div class="form-group">
-                    <label for="rho1">Choose rho of the first element:</label>
-                    <input class="form-control" v-model="rho1" id="rho1">
+                <div class="form-group-wrapper">
+                    <div class="form-group form-group-custom first">
+                        <label for="rho1">Density at rest in the first environment:</label>
+                        <input class="form-control" v-model="rho1" id="rho1">
+                    </div>
+                    <div class="form-group form-group-custom">
+                        <label for="rho2">Density at rest in the second environment:</label>
+                        <input class="form-control" v-model="rho2" id="rho2">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="rho2">Choose rho of the second element:</label>
-                    <input class="form-control" v-model="rho2" id="rho2">
-                </div>
-                <div class="form-group">
-                    <label for="speed1">Choose speed of sound in the first element:</label>
-                    <input class="form-control" v-model="v1" id="speed1">
-                </div>
-                <div class="form-group">
-                    <label for="speed2">Choose speed of sound in the second element:</label>
-                    <input class="form-control" v-model="v2" id="speed2">
+                <div class="form-group-wrapper">
+                    <div class="form-group form-group-custom first">
+                        <label for="speed1">Choose speed of sound in the first environment:</label>
+                        <input class="form-control" v-model="v1" id="speed1">
+                    </div>
+                    <div class="form-group form-group-custom">
+                        <label for="speed2">Choose speed of sound in the second environment:</label>
+                        <input class="form-control" v-model="v2" id="speed2">
+                    </div>
                 </div>
                 <button type="submit" class="btn btn-danger">Submit</button>
             </form>
+        </div>
+        <div class="col-md-7 col-main">
+            <h3 class="graphics-title">Your output:</h3>
             <random-chart
                 :charts = "charts"
             ></random-chart>
@@ -84,10 +74,26 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.small {
+    margin: auto !important;
+}
+.form-group-wrapper {
+    display: flex;
+}
+.form-group-custom .first {
+    width: 45%;
+    margin-right: 10%;
+}
+.first {
+    margin-right: 10%;
+}
 .col-main {
     border-radius: 5px;
 }
 .main-title {
     color: #fb8817;
+}
+.graphics-title {
+    color: #2d2d2d;
 }
 </style>
